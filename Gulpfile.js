@@ -7,6 +7,18 @@ var webpack = require("webpack");
 var WebpackDevServer = require("webpack-dev-server");
 var webpackConfig = require("./webpack.config.js");
 var stream = require('webpack-stream');
+var sass = require('gulp-sass');
+
+gulp.task('sass', function(){
+  return gulp.src('style/sass/**/*.scss')
+    .pipe(sass()) // Converts Sass to CSS with gulp-sass
+    .pipe(gulp.dest('style/css'))
+});
+
+gulp.task('sass-watch', function(){
+  gulp.watch('style/sass/**/*.scss', ['sass']); 
+  // Other watchers
+});
 
 
 gulp.task('webpack', [], function() {
@@ -17,8 +29,6 @@ gulp.task('webpack', [], function() {
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.DEST_BUILD));
 });
-
-
 
 gulp.task("webpack-dev-server", function(callback) {
     // modify some webpack config options
@@ -54,4 +64,4 @@ gulp.task('watch', function() {
 });
 
 
-gulp.task('default', ['webpack-dev-server', 'watch']);
+gulp.task('default', ['webpack-dev-server', 'watch','sass-watch']);
