@@ -12,6 +12,7 @@
 <body>
 
 <div class='ng-cloak' ng-controller='main'>
+	<div class='row'>
 
 	<nav class='navbar navbar-light'>
 			<div class='col-sm-2 pull-right'>
@@ -33,11 +34,12 @@
 		<div class='row text-center'>
 			<h2>I’m a sentence used to convey something about someone.</h2>
 		</div>
-		<div class='row'>
+		<div class='container'>
 			<div class='col-sm-12'>
 				<ul class='skill-list'>
-					<li class="text-center {{$index=== active ? 'active':''}}" ng-click="toggleActive($index,skill)" ng-repeat="skill in skills">{{skill}}</li>
+					<li class="text-center" ng-click="toggleActive($index,skill)" ng-repeat="skill in skills">{{skill}}</li>
 				</ul>
+				<hr class='glow-line'/>
 			</div>
 		</div>
 		<div class='image-contain row text-center'>
@@ -48,7 +50,7 @@
 	</div>
 
 	<div id="contact-modal" class='row modal hide-modal'>
-		<div class=' modal-contain col-lg-6 col-lg-offset-3'>
+		<div class=' modal-contain col-lg-6 col-lg-offset-3 contact'>
 			<div class='col-sm-12 text-right noPad close-contain'><span class='close-modal' ng-click="toggleContact()">x</span></div>
 
 			<div class='col-sm-12 noPad text-center'><h2>Lets get to know you</h2></div>
@@ -91,6 +93,9 @@
 		</div>	
 
 	</div>
+
+	</div>
+</div>
 	
 </body>
 </html>

@@ -48,6 +48,10 @@ myApp.controller('main',function($scope,$filter,$log){
 	
 		$scope.active = index;
 
+		var hr = document.getElementsByClassName('glow-line')[0];
+
+		hr.style.marginLeft = (index * 10 + "%");
+
 		$scope.filterList(skill)
 	}
 
@@ -62,7 +66,7 @@ myApp.controller('main',function($scope,$filter,$log){
 			})
 		})
 
-		console.log($scope.second)
+		
 	};
 
 	$scope.toggleContact = function() {
