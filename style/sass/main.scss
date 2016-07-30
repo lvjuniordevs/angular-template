@@ -108,9 +108,10 @@ hr {
 
 }
 
-.active {
-	border-bottom: 2px solid #559363;
-	margin-bottom: 1px;
+.about-project {
+	top:150px;
+	position: relative;
+	z-index: 100;
 }
 
 .image-contain {
@@ -126,6 +127,18 @@ hr {
 	img {
 		width:250px;
 		height:250px;
+	}
+}
+
+#image-modal {
+	img {
+		position:absolute;
+		top:0;
+		width:100%;
+		height:85vh
+	}
+	a {
+		position: relative;
 	}
 }
 

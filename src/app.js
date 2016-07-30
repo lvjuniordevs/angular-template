@@ -10,42 +10,58 @@ myApp.controller('main',function($scope,$filter,$log){
 	{	title:'title',
 		tags:['CSS'],
 		description:'description',
-		url:'http://placehold.it/500x500'
+		url:'http://placehold.it/500x500',
+		site:"www.site.surge.sh",
+		github:'www.github-link.com'
 	},
 	{	title:'title',
 		tags:['CSS'],
 		description:'description',
-		url:'http://placehold.it/500x500'
+		url:'http://placehold.it/500x500',
+		site:"www.site.surge.sh",
+		github:'www.github-link.com'
 	},
 	{	title:'title',
 		tags:['CSS'],
 		description:'description',
-		url:'http://placehold.it/500x500'
+		url:'http://placehold.it/500x500',
+		site:"www.site.surge.sh",
+		github:'www.github-link.com'
 	},
 	{	title:'title',
 		tags:['Javascript'],
 		description:'description',
-		url:'http://placehold.it/500x500'
+		url:'http://placehold.it/500x500',
+		site:"www.site.surge.sh",
+		github:'www.github-link.com'
 	},
 	{	title:'title',
 		tags:['Javascript'],
 		description:'description',
-		url:'http://placehold.it/500x500'
+		url:'http://placehold.it/500x500',
+		site:"www.site.surge.sh",
+		github:'www.github-link.com'
 	},
 	{	title:'title',
 		tags:['Javascript'],
 		description:'description',
-		url:'http://placehold.it/500x500'
+		url:'http://placehold.it/500x500',
+		site:"www.site.surge.sh",
+		github:'www.github-link.com'
 	},
 	{	title:'title',
 		tags:['Javascript'],
 		description:'description',
-		url:'http://placehold.it/500x500'
+		url:'http://placehold.it/500x500',
+		site:"www.site.surge.sh",
+		github:'www.github-link.com'
 	},
 	{	title:'title',
 		tags:['Javascript','CSS'],
 		description:'description',
-		url:'http://placehold.it/500x500'
+		url:'http://placehold.it/500x500',
+		site:"www.site.surge.sh",
+		github:'www.github-link.com'
 	}
 	];
 
@@ -98,6 +114,8 @@ myApp.controller('main',function($scope,$filter,$log){
 		$scope.title = item.title;
 		$scope.description = item.description;
 		$scope.tags = item.tags;
+		$scope.site = item.site;
+		$scope.github = item.github;
 
 		
 	}
