@@ -12,6 +12,7 @@ nav span {
 	
 	font-size: 18px;
 	font-weight: 100;
+	cursor: pointer;
 }
 
 h2 {
@@ -27,6 +28,50 @@ ul {
 
 li {
 	list-style: none; 
+}
+
+.modal-button {
+	background-color: #000;
+	border:1px solid #ddd;
+}
+
+.modal-input {
+	background-color: #000;
+	border:1px solid #ddd;
+}
+
+.message {
+	padding-bottom: 55px;
+	background-color: #000;
+	border:1px solid #ddd;
+
+}
+
+.close-modal {
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-contain {
+	background-color: #000;
+}
+
+.hide-modal {
+	display: none;
 }
 
 .skill-list {
@@ -54,7 +99,13 @@ li {
 }
 
 .image-item {
-	
+
 	margin-top:30px;
+
+	img {
+		width:250px;
+		height:250px;
+	}
 }
+
 

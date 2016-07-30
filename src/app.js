@@ -9,35 +9,35 @@ myApp.controller('main',function($scope,$filter){
 	$scope.list = [
 	{
 		tags:['All','CSS'],
-		url:'http://placehold.it/250x250'
+		url:'http://placehold.it/500x500'
 	},
 	{
 		tags:['All','CSS'],
-		url:'http://placehold.it/250x250'
+		url:'http://placehold.it/500x500'
 	},
 	{
 		tags:['All','CSS'],
-		url:'http://placehold.it/250x250'
+		url:'http://placehold.it/500x500'
 	},
 	{
 		tags:['All','Javascript'],
-		url:'http://placehold.it/250x250'
+		url:'http://placehold.it/500x500'
 	},
 	{
 		tags:['All','Javascript'],
-		url:'http://placehold.it/250x250'
+		url:'http://placehold.it/500x500'
 	},
 	{
 		tags:['All','Javascript'],
-		url:'http://placehold.it/250x250'
+		url:'http://placehold.it/500x500'
 	},
 	{
 		tags:['All','Javascript'],
-		url:'http://placehold.it/250x250'
+		url:'http://placehold.it/500x500'
 	},
 	{
 		tags:['All','Javascript','CSS'],
-		url:'http://placehold.it/250x250'
+		url:'http://placehold.it/500x500'
 	}
 	];
 
@@ -63,6 +63,16 @@ myApp.controller('main',function($scope,$filter){
 
 		console.log($scope.second)
 	};
+
+	$scope.toggleContact = function() {
+		var myEl = angular.element( document.querySelector( '#contact-modal' ) );
+		myEl.toggleClass('hide-modal');
+	}
+
+	$scope.toggleImage = function() {
+		var myEl = angular.element( document.querySelector( '#image-modal' ) );
+		myEl.toggleClass('hide-modal');
+	}
 
 		
 	
