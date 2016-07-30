@@ -7,36 +7,44 @@ myApp.controller('main',function($scope,$filter,$log){
 	$scope.skills = ['All','Javascript','CSS'];
 	$scope.active = 0;
 	$scope.list = [
-	{
-		tags:['All','CSS'],
+	{	title:'title',
+		tags:['CSS'],
+		description:'description',
 		url:'http://placehold.it/500x500'
 	},
-	{
-		tags:['All','CSS'],
+	{	title:'title',
+		tags:['CSS'],
+		description:'description',
 		url:'http://placehold.it/500x500'
 	},
-	{
-		tags:['All','CSS'],
+	{	title:'title',
+		tags:['CSS'],
+		description:'description',
 		url:'http://placehold.it/500x500'
 	},
-	{
-		tags:['All','Javascript'],
+	{	title:'title',
+		tags:['Javascript'],
+		description:'description',
 		url:'http://placehold.it/500x500'
 	},
-	{
-		tags:['All','Javascript'],
+	{	title:'title',
+		tags:['Javascript'],
+		description:'description',
 		url:'http://placehold.it/500x500'
 	},
-	{
-		tags:['All','Javascript'],
+	{	title:'title',
+		tags:['Javascript'],
+		description:'description',
 		url:'http://placehold.it/500x500'
 	},
-	{
-		tags:['All','Javascript'],
+	{	title:'title',
+		tags:['Javascript'],
+		description:'description',
 		url:'http://placehold.it/500x500'
 	},
-	{
-		tags:['All','Javascript','CSS'],
+	{	title:'title',
+		tags:['Javascript','CSS'],
+		description:'description',
 		url:'http://placehold.it/500x500'
 	}
 	];
@@ -57,15 +65,21 @@ myApp.controller('main',function($scope,$filter,$log){
 
 	$scope.filterList = function(skill) {
 		$scope.second = [];
-		$scope.list.forEach(function(item){
-			return item.tags.forEach(function(tag){
-				if(skill===tag){
-					$scope.second.push(item)
-					return true;
-				}
-			})
-		})
 
+		if(skill==='All') {
+			$scope.second = $scope.list;
+
+		}
+		else {
+			$scope.list.forEach(function(item){
+				return item.tags.forEach(function(tag){
+					if(skill===tag){
+						$scope.second.push(item)
+						return true;
+					}
+				})
+			});
+		}
 		
 	};
 
@@ -81,6 +95,10 @@ myApp.controller('main',function($scope,$filter,$log){
 
 
 		$scope.image = item.url || "";
+		$scope.title = item.title;
+		$scope.description = item.description;
+		$scope.tags = item.tags;
+
 		
 	}
 
