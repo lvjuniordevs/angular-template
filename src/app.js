@@ -3,7 +3,7 @@ var angular = require('angular');
 var myApp = angular.module('myApp',[]);
 
 
-myApp.controller('main',function($scope,$filter){
+myApp.controller('main',function($scope,$filter,$log){
 	$scope.skills = ['All','Javascript','CSS'];
 	$scope.active = 0;
 	$scope.list = [
@@ -42,6 +42,7 @@ myApp.controller('main',function($scope,$filter){
 	];
 
 	$scope.second = $scope.list;
+	$scope.image = '';
 
 	$scope.toggleActive = function(index,skill) {
 	
@@ -69,9 +70,14 @@ myApp.controller('main',function($scope,$filter){
 		myEl.toggleClass('hide-modal');
 	}
 
-	$scope.toggleImage = function() {
+	$scope.toggleImage = function(item) {
+		var item = item || "";
 		var myEl = angular.element( document.querySelector( '#image-modal' ) );
 		myEl.toggleClass('hide-modal');
+
+
+		$scope.image = item.url || "";
+		
 	}
 
 		
