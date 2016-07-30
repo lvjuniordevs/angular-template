@@ -1,20 +1,53 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
-
+<html lang="en" ng-app='myApp'>
 <head>
-    <title>Angular Template</title>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./style/css/main.css">
+	<title>Angular Template</title>
     <script src="dist/build/build.min.js"></script>
+
 </head>
-
 <body>
-	<div ng-controller="main">
-		hi {{name}}
-	</div>	
 
-</span>
+<div class='ng-cloak' ng-controller='main'>
 
+	<nav class='navbar navbar-light'>
+			<div class='col-sm-2 pull-right'>
+			<div class='col-sm-3'>
+				<span>About</span>
+			</div>
+			<div class='col-sm-9'>
+				<span>Contact</span>
+			</div>
+			
+			</div>
+	</nav>
 	
+	<div class='container'>
+	
+	
+		
 
+		<div class='row text-center'>
+			<h2>I’m a sentence used to convey something about someone.</h2>
+		</div>
+		<div class='row'>
+			<div class='col-sm-12'>
+				<ul class='skill-list'>
+					<li class="text-center {{$index=== active ? 'active':''}}" ng-click="toggleActive($index,skill)" ng-repeat="skill in skills">{{skill}}</li>
+				</ul>
+			</div>
+		</div>
+		<div class='image-contain row text-center'>
+			
+				<div class='col-sm-3 image-item' ng-repeat="item in second"><img src="{{item.url}}"</div>
+			
+		</div>
+	</div>
+	
+</div>
+	
 </body>
-
 </html>

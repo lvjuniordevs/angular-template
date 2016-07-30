@@ -1,0 +1,43 @@
+body {
+  background-color: #3b3b3b;
+  color: #e8e9e8; }
+
+nav {
+  padding-top: 8px;
+  padding-bottom: 8px; }
+
+nav span {
+  font-size: 18px;
+  font-weight: 100; }
+
+h2 {
+  font-size: 40px;
+  font-weight: 200; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+
+li {
+  list-style: none; }
+
+.skill-list {
+  padding-top: 75px;
+  border-bottom: 2px solid #ccc; }
+  .skill-list li {
+    display: inline-block;
+    width: 10%;
+    cursor: pointer;
+    margin-bottom: -1px;
+    padding-bottom: 17px; }
+
+.active {
+  border-bottom: 2px solid #559363;
+  margin-bottom: 1px; }
+
+.image-contain {
+  position: relative;
+  top: 40px; }
+
+.image-item {
+  margin-top: 30px; }
