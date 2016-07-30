@@ -1,6 +1,7 @@
 body {
   background-color: #3b3b3b;
-  color: #e8e9e8; }
+  color: #e8e9e8;
+  overflow-x: hidden; }
 
 nav {
   padding-top: 8px;
@@ -53,7 +54,7 @@ li {
   /* Full width */
   height: 100%;
   /* Full height */
-  overflow: auto;
+  overflow: hidden;
   /* Enable scroll if needed */
   background-color: black;
   /* Fallback color */
