@@ -15,11 +15,12 @@
 	<div class='row'>
 
 	<nav class='navbar navbar-light'>
+			<div class='col-sm-12'>
 			<div class='col-sm-2 pull-right'>
-			<div class='col-sm-3'>
+			<div class='col-xs-3'>
 				<span>About</span>
 			</div>
-			<div class='col-sm-9'>
+			<div class='col-xs-9'>
 				<span ng-click="toggleContact()">Contact</span>
 			</div>
 			
@@ -50,7 +51,7 @@
 	</div>
 
 	<div id="contact-modal" class='row modal hide-modal'>
-		<div class=' modal-contain col-lg-6 col-lg-offset-3 contact'>
+		<div class=' modal-contain modal-contain-contact col-lg-6 col-lg-offset-3 contact'>
 			<div class='col-sm-12 text-right noPad close-contain'><span class='close-modal' ng-click="toggleContact()">x</span></div>
 
 			<div class='col-sm-12 noPad text-center'><h2>Let me get to know you</h2></div>
@@ -85,24 +86,44 @@
 	</div>
 
 	<div id="image-modal" class='row modal hide-modal'>
-		<div class=' modal-contain col-lg-8 col-lg-offset-2'>
+		<div class='image-modal-contain modal-contain col-lg-8 col-lg-offset-2'>
+		<div class='test'>
+		<div class='col-sm-12 about-project'>
 			<div class='col-sm-12 text-right noPad close-contain'>
 				<span class='close-modal' ng-click="toggleImage()">x</span>
 			</div>
 
-			<div style="position: relative">
-			<div class='about-project'>
-				<h2>{{title}}</h2>
-				<ul>
-					<li ng-repeat="tag in tags">{{tag}}</li>
-				</ul>
-				<h4>{{description}}</h4>
+			
+			
+				<div class='col-sm-12 text-center'>
+					<h2>{{title}}</h2>
+				</div>
+				<div class='col-sm-12'>
+					<ul>
+						<li ng-repeat="tag in tags">{{tag}}</li>
+					</ul>
+				</div>
+				<div class='col-sm-12 description text-center'>
+					<h4>{{description}}</h4>
+				</div>
+				<div class='col-sm-12'>
+				<div class='link-contain col-sm-6 col-sm-offset-3'>
+					<div class='col-sm-6 text-center'>
+						<a href="{{site}}"><span>site</span></a>
+					</div>
+					<div class='col-sm-6 text-center'>
+						<a href="{{github}}"><span>github</span></a>
+					</div>
+				</div>
 				
+				
+				
+				</div>
+			</div>
 			</div>
 			<img src="{{image}}"/>
-
-			<a href="{{site}}"><span>site</span></a>
-			<a href="{{github}}"><span>github</span></a>
+			
+			
 			</div>
 		</div>	
 

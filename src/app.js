@@ -4,7 +4,7 @@ var myApp = angular.module('myApp',[]);
 
 
 myApp.controller('main',function($scope,$filter,$log){
-	$scope.skills = ['All','Javascript','CSS'];
+	$scope.skills = ['All','Javascript','CSS','React'];
 	$scope.active = 0;
 	$scope.list = [
 	{	title:'title',
