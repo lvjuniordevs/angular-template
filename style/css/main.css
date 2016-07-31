@@ -6,11 +6,10 @@ body {
 nav {
   padding-top: 8px;
   padding-bottom: 8px; }
-
-nav span {
-  font-size: 18px;
-  font-weight: 100;
-  cursor: pointer; }
+  nav span {
+    font-size: 18px;
+    font-weight: 100;
+    cursor: pointer; }
 
 h2 {
   font-size: 40px;
@@ -29,13 +28,15 @@ input:focus {
 textarea:focus {
   border-color: green !important; }
 
-.modal-button {
-  background-color: #000;
-  border: 1px solid #ddd; }
+.close-contain {
+  z-index: 10; }
 
-.modal-button:hover {
-  background-color: #000;
-  border: 1px solid green; }
+.close-modal {
+  font-size: 30px;
+  cursor: pointer; }
+
+.close-modal:hover {
+  cursor: pointer; }
 
 .modal-input {
   background-color: #000;
@@ -47,14 +48,15 @@ textarea:focus {
   border: 1px solid #ddd;
   resize: none; }
 
-.close-contain {
-  z-index: 10; }
+.modal-button {
+  background-color: #000;
+  border: 1px solid #ddd; }
 
-.close-modal {
-  font-size: 30px;
-  cursor: pointer; }
+.modal-button:hover {
+  background-color: #000;
+  border: 1px solid green; }
 
-.modal {
+#overlay {
   display: block;
   /* Hidden by default */
   position: fixed;
@@ -74,11 +76,18 @@ textarea:focus {
   background-color: rgba(0, 0, 0, 0.9);
   /* Black w/ opacity */ }
 
+.overlay {
+  display: none !important; }
+
 .modal-contain {
   background-color: #000; }
 
 .hide-modal {
   display: none; }
+
+.disabled {
+  visibility: hidden;
+  cursor: default; }
 
 .contact {
   top: 30vh; }
@@ -111,6 +120,8 @@ hr {
 .image-contain {
   position: relative;
   top: 40px; }
+  .image-contain img {
+    cursor: pointer; }
 
 .image-item {
   margin-top: 30px; }
@@ -123,7 +134,16 @@ hr {
   position: relative; }
 
 .modal-contain-contact {
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  z-index: 999;
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 50px; }
+
+.show-modal {
+  display: block;
+  opacity: 1; }
 
 .test {
   position: relative; }
@@ -141,10 +161,19 @@ hr {
   display: inline-block; }
 
 #image-modal .description {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
+  position: relative;
+  top: 95px; }
 
 .link-contain {
   top: 400px; }
+
+.check {
+  stroke-dasharray: 130px 130px;
+  stroke-dashoffset: 130px;
+  -webkit-transition: stroke-dashoffset 4.1s linear 0s;
+  transition: stroke-dashoffset 500ms ease-in-out; }
+
+svg {
+  position: absolute;
+  left: 320px;
+  top: 175px; }

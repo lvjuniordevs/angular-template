@@ -10,7 +10,7 @@
 
 </head>
 <body>
-
+<div id='overlay' class='overlay'></div>
 <div class='ng-cloak' ng-controller='main'>
 	<div class='row'>
 
@@ -50,13 +50,14 @@
 		</div>
 	</div>
 
-	<div id="contact-modal" class='row modal hide-modal'>
-		<div class=' modal-contain modal-contain-contact col-lg-6 col-lg-offset-3 contact'>
+	<div class='row'>
+		<div id="contact-modal" class=' modal-contain modal-contain-contact col-lg-4 col-lg-offset-3 contact'>
 			<div class='col-sm-12 text-right noPad close-contain'><span class='close-modal' ng-click="toggleContact()">x</span></div>
 
-			<div class='col-sm-12 noPad text-center'><h2>Let me get to know you</h2></div>
+			
 
-			<form method="post">
+			<form id="form-body" method="post" ng-submit="success()">
+				<div class='col-sm-12 noPad text-center'><h2>Let me get to know you</h2></div>
 				<div class='col-sm-12 noPad'>
 					<div class='col-sm-1'></div>
 					<div class='col-sm-10'>
@@ -64,13 +65,13 @@
 							<label>
 								Email
 							</label>
-							<input class='modal-input form-control' type="email" placeholder="email@example.com" />
+							<input class='modal-input form-control' type="email" required placeholder="email@example.com" value="test@yahoo.com" />
 						</div>
 						<div class='form-group'>
 							<label>
 								Message
 							</label>
-							<textarea class='message modal-input form-control' placeholder='message'></textarea>
+							<textarea class='message modal-input form-control' value="hi" required placeholder='message'></textarea>
 						</div>
 						<div class='form-group text-right'>
 							
@@ -81,8 +82,15 @@
 					<div class='col-sm-1'></div>
 
 				</div>
+
+				
+
 			</form>
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90.594px" height="59.714px" viewBox="0 0 90.594 59.714" enable-background="new 0 0 90.594 59.714" xml:space="preserve">
+  					<polyline class="check" fill="none" stroke="#006837" stroke-width="5" stroke-miterlimit="10" points="1.768,23.532 34.415,56.179 88.826,1.768"/>
+			</svg>
 		</div>	
+
 	</div>
 
 	<div id="image-modal" class='row modal hide-modal'>
@@ -126,7 +134,7 @@
 			
 			</div>
 		</div>	
-
+		
 	</div>
 
 	</div>

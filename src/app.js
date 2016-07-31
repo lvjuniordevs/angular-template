@@ -67,6 +67,7 @@ myApp.controller('main',function($scope,$filter,$log){
 
 	$scope.second = $scope.list;
 	$scope.image = '';
+	$scope.hideFields = false;
 
 	$scope.toggleActive = function(index,skill) {
 	
@@ -76,7 +77,9 @@ myApp.controller('main',function($scope,$filter,$log){
 
 		hr.style.marginLeft = (index * 10 + "%");
 
-		$scope.filterList(skill)
+		$scope.filterList(skill);
+
+		
 	}
 
 	$scope.filterList = function(skill) {
@@ -101,13 +104,17 @@ myApp.controller('main',function($scope,$filter,$log){
 
 	$scope.toggleContact = function() {
 		var myEl = angular.element( document.querySelector( '#contact-modal' ) );
-		myEl.toggleClass('hide-modal');
+		var over = angular.element( document.querySelector( '#overlay' ) );
+		myEl.toggleClass('show-modal');
+		over.toggleClass('overlay');
 	}
 
 	$scope.toggleImage = function(item) {
 		var item = item || "";
 		var myEl = angular.element( document.querySelector( '#image-modal' ) );
-		myEl.toggleClass('hide-modal');
+		var over = angular.element( document.querySelector( '#overlay' ) );
+		myEl.toggleClass('show-modal');
+		over.toggleClass('overlay');
 
 
 		$scope.image = item.url || "";
@@ -119,6 +126,29 @@ myApp.controller('main',function($scope,$filter,$log){
 
 		
 	}
+
+	$scope.success = function() {
+		var form = angular.element( document.querySelector( '#form-body' ) );
+		var over = angular.element( document.querySelector( '#overlay' ) );
+		var check = document.getElementsByClassName('check')[0];
+		var myEl = angular.element( document.querySelector( '#contact-modal' ) );
+
+		form.toggleClass('disabled');
+		
+		check.style.strokeDashoffset = 0;
+
+		setTimeout(function(){
+			myEl.toggleClass('show-modal');
+			over.toggleClass('overlay');
+			form.toggleClass('disabled');
+
+			check.style.strokeDashoffset = "";
+		},700)
+	}
+
+
+
+
 
 		
 	
