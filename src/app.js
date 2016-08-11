@@ -145,12 +145,6 @@ myApp.controller('main',function($scope,$filter,$log){
 			check.style.strokeDashoffset = "";
 		},700)
 	}
-
-
-
-
-
-		
 	
 })
 

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "webpack -p",
+    "dev":"webpack --watch & gulp sass-watch & node server.js",
     "start": "node server.js"
   },
   "author": "",
