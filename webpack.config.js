@@ -11,7 +11,7 @@ module.exports = {
     devtool: 'eval',
     entry: './src/app.js',
     output: {
-        path: path.join(__dirname, "build"),
+        path: path.join(__dirname, "/dist/build"),
         filename: 'build.min.js'
     },
     resolve: {
